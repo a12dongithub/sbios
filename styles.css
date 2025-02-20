@@ -1,0 +1,288 @@
+/* Remove or keep any older selectors not in use as you see fit. */
+
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: #121212; /* Dark background */
+  color: #ffffff; /* White text for readability */
+}
+
+@font-face {
+  font-family: nb;
+  src: url(./fonts/NBInternationalProBoo.woff2);
+}
+@font-face {
+  font-family: rejouice;
+  src: url(./fonts/Rejouice-Headline.ttf);
+}
+
+video::-webkit-media-controls-fullscreen-button {
+  display: none !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'nb';
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* Loader */
+#loader {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: #000;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #ffffff;
+}
+#loader h3 {
+  font-size: 3vw;
+  color: #f0f0f0;
+}
+
+/* Page1 */
+#page1 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+#cursor {
+  height: 7.5vw;
+  width: 7.5vw;
+  background-color: #ffffff; /* Light cursor on dark background */
+  border-radius: 50%;
+  position: fixed;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+}
+#cursor h5 {
+  font-size: 1.15vw;
+  font-weight: 500;
+  color: #000;
+}
+#page1 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+#page1-content {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  z-index: 10;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+nav {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 3vw;
+}
+nav h3, nav h4 {
+  font-size: 1.4vw;
+  font-weight: 100;
+  color: #ffffff;
+}
+#page1-content h1 {
+  font-family: rejouice;
+  font-size: 27vw;
+  line-height: 27vw;
+  font-weight: 100;
+  color: #f0f0f0;
+}
+
+/* Page2 */
+#page2 {
+  height: 100vh;
+  width: 100%;
+  background: #1a1a1a;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#page2 > #nav > .elem h1 {
+  font-size: 1.67vw;
+  font-weight: 100;
+  color: #e0e0e0;
+}
+#page2 > .heading h1 {
+  font-size: 4.2vw;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Page3: Our Research */
+#page3 {
+  min-height: 100vh;
+  width: 100%;
+  background: #121212;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.research-content {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.research-image img {
+  width: 600px;
+  max-width: 90%;
+  object-fit: cover;
+}
+.research-text {
+  max-width: 600px;
+}
+.research-text h1 {
+  font-size: 4.2vw; /* same style as .elem.heading h1 */
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.research-text p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+
+/* Page4: Publications */
+#page4 {
+  min-height: 100vh;
+  width: 100%;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pub-content {
+  width: 70%;
+  text-align: center;
+}
+.pub-content h1 {
+  font-size: 4.2vw;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.pub-content ul {
+  list-style: none;
+  padding: 0;
+}
+.pub-content li {
+  margin: 1rem 0;
+}
+.pub-content a {
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+.pub-content a:hover {
+  color: #ccc;
+}
+
+/* Page5: Our Team */
+#page5 {
+  min-height: 100vh;
+  width: 100%;
+  background: #121212;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding-top: 5rem;
+}
+#page5 h1 {
+  font-size: 4.2vw;
+  font-family: nb;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+.team-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+.person-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.person-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.person-card p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+/* Page6: Contact Us */
+#page6 {
+  min-height: 100vh;
+  width: 100%;
+  background: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#page6 h1 {
+  font-size: 4.2vw;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.contact-btn {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: conic-gradient(#ff7878, #78ff78, #7878ff, #ff7878);
+  border-radius: 50%;
+  color: #121212;
+  text-decoration: none;
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+.contact-btn:hover {
+  transform: scale(1.1);
+}
