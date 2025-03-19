@@ -184,3 +184,57 @@ gsap.from("#page6 h1, #page6 .contact-wrapper", {
     scrub: 1
   }
 });
+
+/* Page5: Clients */
+gsap.from("#page5 .client-carousel", {
+  opacity: 0,
+  y: 70,
+  duration: 1.2,
+  scrollTrigger: {
+    trigger: "#page5",
+    scroller: "#main",
+    start: "top 60%",
+    end: "top 40%",
+    scrub: 1
+  }
+});
+
+// Initialize Swiper for client carousel
+const clientSwiper = new Swiper('.client-swiper', {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  speed: 800,
+  effect: 'slide',
+  direction: 'horizontal',
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 30
+    }
+  }
+});

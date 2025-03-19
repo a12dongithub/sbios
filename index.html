@@ -13,6 +13,10 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
   />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
   <link rel="stylesheet" href="styles.css" />
 
   <style>
@@ -143,28 +147,37 @@
       </div>
     </div>
 
-    <!-- PAGE 5: OUR TEAM -->
+    <!-- PAGE 5: OUR CLIENTS -->
     <div id="page5">
-      <h1>Meet Our Team</h1>
-      <div class="team-wrapper">
-        <!-- Example person card -->
-        <div class="person-card">
-          <img
-            src="./videos/singhal-sandeep_photo.jpg"
-            alt="Dr. Jane Doe"
-          />
-          <p>Dr. Sandeep Singhal</p>
-          <p>Associate Professor, University of North Dakota</p>
+      <h1 class="section-title">Our Clients</h1>
+      <div class="client-carousel">
+        <div class="swiper client-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/bio-techne.jpg" alt="Bio-Techne" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/UofA.jpg" alt="University of Arizona" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/UND.png" alt="University of North Dakota" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/columbia.png" alt="Columbia University" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/NIH.png" alt="NIH" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/Google.webp" alt="Google" />
+            </div>
+          </div>
+          <!-- Add navigation buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
-        <div class="person-card">
-          <img
-            src="./videos/images.jpeg"
-            alt="John Smith"
-          />
-          <p>Dr. Sonalika Singhal</p>
-          <p>Post Doc, University of North Dakota</p>
-        </div>
-       
+        <!-- Pagination outside the swiper container but inside client-carousel -->
+        <div class="swiper-pagination"></div>
       </div>
     </div>
 
