@@ -17,6 +17,7 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
   />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
 
   <style>
@@ -40,11 +41,34 @@
     <h3>Genome</h3>
   </div>
 
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">SBIOS</div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-link">Our Products <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="genomic-analysis.html">Genomic Analysis</a></li>
+            <li><a href="biomarker-discovery.html">Biomarker Discovery</a></li>
+            <li><a href="custom-solutions.html">Custom Solutions</a></li>
+          </ul>
+        </li>
+        <li><a href="research.html" class="nav-link">Our Research</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
   <div id="main">
     <!-- PAGE 1 -->
     <div id="page1">
       <div id="cursor">
-        <h5></h5>
+        <h5>Play</h5>
       </div>
       <video
         muted
@@ -56,13 +80,14 @@
         <source src="./videos/page12.mp4" type="video/mp4" />
       </video>
       <div id="page1-content">
-        <nav>
-          <h3></h3>
-          <h4></h4>
-        </nav>
         <h1>
           <span>S</span><span>B</span><span>I</span><span>O</span><span>S</span>
         </h1>
+        <p class="tagline">Decoding biology. Advancing healthcare.</p>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll Down</span>
+        <i class="fas fa-chevron-down"></i>
       </div>
     </div>
 
@@ -84,6 +109,54 @@
         <h1>to advance personalized medicine, diagnostics,</h1>
         <h1>and therapeutic development. Partner with us</h1>
         <h1>to shape the future of genomics and healthcare.</h1>
+      </div>
+    </div>
+
+    <!-- PRODUCTS SECTION -->
+    <div id="products" class="products-section">
+      <h1 class="section-title">Our Products</h1>
+      <div class="products-container">
+        <!-- Product 1: Genomic Analysis -->
+        <div id="products-genomics" class="product-card">
+          <div class="product-icon">
+            <i class="fas fa-dna"></i>
+          </div>
+          <h2>Genomic Analysis</h2>
+          <p>
+            Our advanced genomic analysis platform enables comprehensive DNA sequencing, 
+            variant calling, and interpretation to identify genetic factors in diseases 
+            and treatment responses.
+          </p>
+          <a href="genomic-analysis.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <!-- Product 2: Biomarker Discovery -->
+        <div id="products-biomarkers" class="product-card">
+          <div class="product-icon">
+            <i class="fas fa-microscope"></i>
+          </div>
+          <h2>Biomarker Discovery</h2>
+          <p>
+            Our biomarker discovery tools help identify novel molecular indicators 
+            for disease diagnosis, prognosis, and treatment response prediction 
+            using multi-omics data integration.
+          </p>
+          <a href="biomarker-discovery.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <!-- Product 3: Custom Solutions -->
+        <div id="products-custom" class="product-card">
+          <div class="product-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h2>Custom Solutions</h2>
+          <p>
+            We develop tailored bioinformatics and genomics solutions for 
+            pharmaceutical research, clinical trials, and precision medicine 
+            applications based on your specific requirements.
+          </p>
+          <a href="custom-solutions.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
       </div>
     </div>
 
@@ -115,12 +188,12 @@
           </li>
           <li>
             <a href="https://pubmed.ncbi.nlm.nih.gov/33526872/" target="_blank">
-              Kaiso (ZBTB33) subcellular partitioning functionally links LC3A/B, the tumor microenvironment, and breast cancer survival. Nature - Communications biology 4 (1), 1-132021
+              Kaiso (ZBTB33) subcellular partitioning functionally links LC3A/B, the tumor microenvironment, and breast cancer survival. Nature - Communications biology 4 (1), 1-132021
             </a>
           </li>
           <li>
             <a href="https://www.nature.com/articles/s41588-020-00748-0" target="_blank">
-              Trans-ancestry genome-wide association meta-analysis of prostate cancer identifies new susceptibility loci and informs genetic risk prediction. Nature genetics 53 (1), 65-75
+              Trans-ancestry genome-wide association meta-analysis of prostate cancer identifies new susceptibility loci and informs genetic risk prediction. Nature genetics 53 (1), 65-75
             </a>
           </li>
           <li>
@@ -130,17 +203,17 @@
           </li>
           <li>
             <a href="https://www.nature.com/articles/s41588-020-00748-0" target="_blank">
-              Racial Differences in the Association between Luminal Master Regulator Expression and Breast Cancer Survival". Clinical Cancer Research, 2020
+              Racial Differences in the Association between Luminal Master Regulator Expression and Breast Cancer Survival". Clinical Cancer Research, 2020
             </a>
           </li>
           <li>
             <a href="https://www.nature.com/articles/s41588-020-00748-0" target="_blank">
-              Gene modules and response to neoadjuvant chemotherapy in breast cancer subtypes: a pooled analysis,” Journal of Clinical Oncology, 2012J Clin Oncol 30:1996-2004, 2012
+              Gene modules and response to neoadjuvant chemotherapy in breast cancer subtypes: a pooled analysis, "Journal of Clinical Oncology, 2012J Clin Oncol 30:1996-2004, 2012
             </a>
           </li>
           <li>
             <a href="https://www.nature.com/articles/s41588-020-00748-0" target="_blank">
-              Elucidating prognosis and biology of breast cancer arising in young women using gene expression profiling,” Clinical Cancer Research, 2012
+              Elucidating prognosis and biology of breast cancer arising in young women using gene expression profiling, "Clinical Cancer Research, 2012
             </a>
           </li>
         </ul>
@@ -149,7 +222,7 @@
 
     <!-- PAGE 5: OUR CLIENTS -->
     <div id="page5">
-      <h1 class="section-title">Individual-affiliated Publication</h1>
+      <h1 class="section-title">Our Partners</h1>
       <div class="client-carousel">
         <div class="swiper client-swiper">
           <div class="swiper-wrapper">
@@ -183,10 +256,23 @@
 
     <!-- PAGE 6: CONTACT US -->
     <div id="page6">
-      <h1>Contact Us</h1>
+      <h1 class="section-title">Contact Us</h1>
       <div class="contact-wrapper">
-        <!-- Circular button that redirects to mail -->
-        <a href="mailto:connect@s-bios.com" class="contact-btn">Email Us</a>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h2>Get in Touch</h2>
+          <p>Ready to partner with us? Our team is available to discuss your genomics and biomarker needs.</p>
+          <div class="contact-buttons">
+            <a href="mailto:connect@s-bios.com" class="contact-btn">Email Us</a>
+            <a href="tel:+17017778888" class="contact-btn phone">Call Us</a>
+          </div>
+          <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> Grand Forks, North Dakota</p>
+            <p><i class="fas fa-envelope"></i> connect@s-bios.com</p>
+          </div>
+        </div>
       </div>
     </div>
     

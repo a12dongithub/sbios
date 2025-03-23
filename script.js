@@ -3,12 +3,34 @@
   only appending new sections' animations if desired.
 */
 
-/* Keep the same functionality for video play on click */
+/* Handle page visibility changes for video */
+document.addEventListener('visibilitychange', function() {
+  const video = document.querySelector("video");
+  if (video) {
+    if (document.hidden) {
+      // Pause video when tab is not visible
+      video.pause();
+    } else {
+      // Play video when tab becomes visible again
+      video.play();
+    }
+  }
+});
+
+/* Keep the same functionality for video play on click but improve it */
 function playVideo() {
-  document.querySelector("body").addEventListener("click", () => {
-    document.querySelector("video").play();
-    console.log("hey");
-  });
+  const video = document.querySelector("video");
+  if (video) {
+    // Set video to autoplay once loaded
+    video.addEventListener('loadeddata', function() {
+      video.play();
+    });
+    
+    // Also allow click to play
+    document.querySelector("body").addEventListener("click", () => {
+      video.play();
+    });
+  }
 }
 playVideo();
 
@@ -52,6 +74,11 @@ function locoScroll () {
 
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
   ScrollTrigger.refresh();
+  
+  // Make locoScroll instance available globally
+  window.locoScroll = locoScroll;
+  
+  return locoScroll;
 }
 locoScroll();
 
@@ -98,8 +125,41 @@ function page2Animation(){
 }
 page2Animation();
 
-/* Loader timeline */
-var tl = gsap.timeline();
+/* Products Section Animation */
+function productsAnimation() {
+  // Title animation
+  gsap.from(".products-section .section-title", {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".products-section",
+      scroller: "#main",
+      start: "top 70%",
+      end: "top 50%",
+      scrub: 1
+    }
+  });
+  
+  // Cards animation with stagger
+  gsap.from(".product-card", {
+    opacity: 0,
+    y: 100,
+    stagger: 0.2,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".products-container",
+      scroller: "#main",
+      start: "top 80%",
+      end: "top 60%",
+      scrub: 1
+    }
+  });
+}
+productsAnimation();
+
+/* Loader timeline - plays only once */
+var tl = gsap.timeline({ repeat: 0 }); // Set repeat to 0 to play only once
 
 tl.from("#loader h3", {
   x:40,
@@ -236,5 +296,120 @@ const clientSwiper = new Swiper('.client-swiper', {
       slidesPerView: 4,
       spaceBetween: 30
     }
+  }
+});
+
+/* Navigation functionality */
+function initNavigation() {
+  // Dropdown toggle
+  const dropdowns = document.querySelectorAll('.dropdown');
+  
+  dropdowns.forEach(dropdown => {
+    const dropdownLink = dropdown.querySelector('.nav-link');
+    
+    dropdownLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      dropdown.classList.toggle('active');
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('active');
+      }
+    });
+  });
+  
+  // Mobile menu toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+  
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    // Toggle icon between bars and X
+    const icon = menuToggle.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-times');
+  });
+  
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+  
+  // Apply smooth scroll to all contact-scroll class links
+  const contactLinks = document.querySelectorAll('.contact-scroll');
+  
+  if (contactLinks.length > 0) {
+    contactLinks.forEach(contactLink => {
+      contactLink.addEventListener('click', (e) => {
+        // Only prevent default if we're already on index.html
+        if (!contactLink.href.includes('index.html') || window.location.pathname.includes('index.html')) {
+          e.preventDefault();
+          
+          // Close mobile menu if open
+          if (navMenu) {
+            navMenu.classList.remove('active');
+          }
+          
+          // If we're on index.html already
+          if (!contactLink.href.includes('index.html') || window.location.pathname.includes('index.html')) {
+            const targetId = contactLink.getAttribute('href').split('#')[1];
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+              // If using Locomotive Scroll
+              const locoScroll = window.locoScroll;
+              
+              if (locoScroll) {
+                // For extra smoothness on Contact Us
+                locoScroll.scrollTo(targetElement, {
+                  duration: 1500,
+                  easing: [0.25, 0.1, 0.25, 1.0], // Cubic bezier curve
+                });
+              } else {
+                // Fallback to standard scrolling
+                targetElement.scrollIntoView({ 
+                  behavior: 'smooth'
+                });
+              }
+            }
+          }
+        }
+      });
+    });
+  }
+}
+
+// Initialize all navigation functions after page loads
+document.addEventListener('DOMContentLoaded', () => {
+  initNavigation();
+  
+  // Check if URL has a hash and scroll to that section after page loads
+  if (window.location.hash && window.location.hash.includes('page6')) {
+    setTimeout(() => {
+      const targetElement = document.querySelector(window.location.hash);
+      if (targetElement) {
+        // If using Locomotive Scroll
+        const locoScroll = window.locoScroll;
+        
+        if (locoScroll) {
+          locoScroll.scrollTo(targetElement, {
+            duration: 1500,
+            easing: [0.25, 0.1, 0.25, 1.0]
+          });
+        } else {
+          // Fallback to standard scrolling
+          targetElement.scrollIntoView({ 
+            behavior: 'smooth'
+          });
+        }
+      }
+    }, 1000); // Give the page time to fully load
   }
 });

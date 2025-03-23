@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Genomic Analysis | SBIOS</title>
+  <link
+    rel="shortcut icon"
+    href="https://rejouice.com/assets/favicon/favicon-32x32.png"
+    type="image/x-icon"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    
+    .page-header {
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./images/dna-banner.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-top: 70px;
+    }
+    
+    .product-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+    
+    .product-section {
+      margin-bottom: 60px;
+    }
+    
+    .product-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .product-section h2:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(135deg, #6c5ce7, #8e44ad);
+    }
+    
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .feature-card {
+      background: rgba(30, 30, 30, 0.7);
+      border-radius: 10px;
+      padding: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: #6c5ce7;
+      margin-bottom: 20px;
+    }
+    
+    .feature-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+    
+    .cta-section {
+      text-align: center;
+      margin-top: 60px;
+      padding: 60px 20px;
+      background: rgba(30, 30, 30, 0.5);
+      border-radius: 10px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #6c5ce7, #8e44ad);
+      color: #ffffff;
+      padding: 15px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 30px;
+      transition: all 0.3s ease;
+    }
+    
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">SBIOS</div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-link">Our Products <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="genomic-analysis.html">Genomic Analysis</a></li>
+            <li><a href="biomarker-discovery.html">Biomarker Discovery</a></li>
+            <li><a href="custom-solutions.html">Custom Solutions</a></li>
+          </ul>
+        </li>
+        <li><a href="research.html" class="nav-link">Our Research</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1 class="section-title">Genomic Analysis</h1>
+  </div>
+  
+  <!-- Main Content -->
+  <div class="product-container">
+    <div class="product-section">
+      <h2>Overview</h2>
+      <p>Our advanced genomic analysis platform enables comprehensive DNA sequencing, variant calling, and interpretation to identify genetic factors in diseases and treatment responses. Using cutting-edge bioinformatics tools and algorithms, we provide in-depth analysis of genomic data to support research, clinical diagnostics, and personalized medicine.</p>
+      
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-dna"></i>
+          </div>
+          <h3>Whole Genome Sequencing</h3>
+          <p>Comprehensive analysis of the complete genome to identify all genetic variations, including single nucleotide polymorphisms (SNPs), insertions, deletions, and structural variants.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-microscope"></i>
+          </div>
+          <h3>Exome Sequencing</h3>
+          <p>Targeted analysis of protein-coding regions of the genome, providing a cost-effective approach to identify pathogenic variants in genetic disorders.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Variant Interpretation</h3>
+          <p>Advanced algorithms for variant classification, annotation, and pathogenicity prediction, incorporating multiple databases and computational approaches.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product-section">
+      <h2>Technology</h2>
+      <p>Our genomic analysis platform leverages state-of-the-art sequencing technologies and proprietary computational algorithms to provide accurate and comprehensive genomic insights:</p>
+      
+      <ul>
+        <li>Support for multiple sequencing platforms including Illumina, PacBio, and Oxford Nanopore</li>
+        <li>Cloud-based computing infrastructure for rapid processing of large genomic datasets</li>
+        <li>Proprietary machine learning algorithms for improved variant calling and classification</li>
+        <li>Integration with multiple genomic databases for comprehensive annotation</li>
+        <li>Secure data management with HIPAA-compliant storage and processing</li>
+      </ul>
+    </div>
+    
+    <div class="product-section">
+      <h2>Applications</h2>
+      <p>Our genomic analysis solutions are designed to support a wide range of applications in research and clinical settings:</p>
+      
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <h3>Disease Risk Assessment</h3>
+          <p>Identify genetic factors associated with increased risk for various diseases, enabling early intervention and preventive strategies.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-pills"></i>
+          </div>
+          <h3>Pharmacogenomics</h3>
+          <p>Analyze genetic variants that affect drug metabolism and efficacy to guide personalized treatment decisions and reduce adverse effects.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <h3>Rare Disease Diagnosis</h3>
+          <p>Identify causal genetic variants in rare disorders, providing definitive diagnoses for patients with previously unexplained conditions.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-flask"></i>
+          </div>
+          <h3>Cancer Genomics</h3>
+          <p>Characterize somatic mutations in tumors to guide targeted therapies and monitor treatment response through liquid biopsies.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="cta-section">
+      <h2>Ready to leverage the power of genomic analysis?</h2>
+      <p>Contact our team to discuss how our genomic analysis platform can accelerate your research or clinical applications.</p>
+      <a href="contact.html" class="cta-button">Get in Touch</a>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2023 SBIOS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        const icon = menuToggle.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+      });
+      
+      // Dropdown toggle
+      const dropdowns = document.querySelectorAll('.dropdown');
+      
+      dropdowns.forEach(dropdown => {
+        const dropdownLink = dropdown.querySelector('.nav-link');
+        
+        dropdownLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          dropdown.classList.toggle('active');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('active');
+          }
+        });
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+    });
+  </script>
+</body>
+</html> 
