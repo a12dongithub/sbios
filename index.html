@@ -1,301 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home | SBIOS</title>
-  <link
-    rel="shortcut icon"
-    href="https://rejouice.com/assets/favicon/favicon-32x32.png"
-    type="image/x-icon"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <link rel="stylesheet" href="styles.css" />
-
-  <style>
-    body {
-      background-color: #121212; /* Dark background color */
-      color: #ffffff; /* White text for contrast */
-    }
-    h1 {
-      margin: 10px 0;
-    }
-    #space {
-      display: inline-block;
-      width: 10px; /* Adjust spacing as needed */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBIOS | Spatial Biology & Equitable Biomarkers</title> <!-- Updated Title -->
+    <!-- Google Fonts (Example: Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- AOS (Animate On Scroll) Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div id="loader">
-    <h3>Solving</h3>
-    <h3>Human</h3>
-    <h3>Genome</h3>
-  </div>
 
-  <!-- Navigation Bar -->
-  <header class="navbar">
-    <div class="logo">SBIOS</div>
-    <nav class="nav-menu">
-      <ul>
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li class="dropdown">
-          <a href="#" class="nav-link">Our Products <i class="fas fa-chevron-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="genomic-analysis.html">Genomic Analysis</a></li>
-            <li><a href="biomarker-discovery.html">Biomarker Discovery</a></li>
-            <li><a href="custom-solutions.html">Custom Solutions</a></li>
-          </ul>
-        </li>
-        <li><a href="research.html" class="nav-link">Our Research</a></li>
-        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
-      </ul>
+    <!-- Navigation Bar - UPDATED LINKS -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#hero" class="nav-logo">SBIOS</a>
+            <ul class="nav-menu">
+                <li><a href="#biomarkers">Biomarkers</a></li>
+                <li><a href="#consultancy">Consultancy</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-    <div class="menu-toggle">
-      <i class="fas fa-bars"></i>
-    </div>
-  </header>
 
-  <div id="main">
-    <!-- PAGE 1 -->
-    <div id="page1">
-      <div id="cursor">
-        <h5>Play</h5>
-      </div>
-      <video
-        muted
-        autoplay
-        playsinline
-        loop
-        poster="https://images.prismic.io/rejouice/36450525-8a76-4a44-b6d4-59c00ad0b50d_RJ-Home-OuraRing-x2.png?auto=compress%2Cformat&fm=webp&width=1200"
-      >
-        <source src="./videos/page12.mp4" type="video/mp4" />
-      </video>
-      <div id="page1-content">
-        <h1>
-          <span>S</span><span>B</span><span>I</span><span>O</span><span>S</span>
-        </h1>
-        <p class="tagline">Decoding biology. Advancing healthcare.</p>
-      </div>
-      <div class="scroll-indicator">
-        <span>Scroll Down</span>
-        <i class="fas fa-chevron-down"></i>
-      </div>
-    </div>
+    <!-- 1. Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-video-container"> <!-- Changed from hero-background-animation to use video -->
+            <video autoplay loop muted playsinline id="hero-video">
+                <source src="videos/page12.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="hero-overlay"></div> <!-- Overlay for video -->
+        <div class="container hero-content" data-aos="fade-in" data-aos-delay="200">
+            <h1>We Provide <br>
+                <span id="typing-target" class="typing-text"></span>
+            </h1>
+            <p class="subtitle">Elevating Research & Advancing Healthcare.</p>
+            <a href="#biomarkers" class="btn btn-primary">Explore Our Services</a>
+        </div>
+    </section>
+    <!-- END SECTION: Hero -->
 
-    <!-- PAGE 2 -->
-    <div id="page2">
-      <div id="nav">
-        <div class="elem">
-          <h1>A Biomarker Company.</h1>
-        </div>
-        <div class="elem">
-          <h1>Grand Forks, North Dakota</h1>
-        </div>
-      </div>
-      <hr />
-      <div class="elem heading">
-        <h1><span id="space"></span>Welcome to SBIOS, a pioneer in genomics</h1>
-        <h1>and biomarker innovation. We specialize in</h1>
-        <h1>decoding the complexities of human biology</h1>
-        <h1>to advance personalized medicine, diagnostics,</h1>
-        <h1>and therapeutic development. Partner with us</h1>
-        <h1>to shape the future of genomics and healthcare.</h1>
-      </div>
-    </div>
 
-    <!-- PRODUCTS SECTION -->
-    <div id="products" class="products-section">
-      <h1 class="section-title">Our Products</h1>
-      <div class="products-container">
-        <!-- Product 1: Genomic Analysis -->
-        <div id="products-genomics" class="product-card">
-          <div class="product-icon">
-            <i class="fas fa-dna"></i>
-          </div>
-          <h2>Genomic Analysis</h2>
-          <p>
-            Our advanced genomic analysis platform enables comprehensive DNA sequencing, 
-            variant calling, and interpretation to identify genetic factors in diseases 
-            and treatment responses.
-          </p>
-          <a href="genomic-analysis.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-        </div>
-        
-        <!-- Product 2: Biomarker Discovery -->
-        <div id="products-biomarkers" class="product-card">
-          <div class="product-icon">
-            <i class="fas fa-microscope"></i>
-          </div>
-          <h2>Biomarker Discovery</h2>
-          <p>
-            Our biomarker discovery tools help identify novel molecular indicators 
-            for disease diagnosis, prognosis, and treatment response prediction 
-            using multi-omics data integration.
-          </p>
-          <a href="biomarker-discovery.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-        </div>
-        
-        <!-- Product 3: Custom Solutions -->
-        <div id="products-custom" class="product-card">
-          <div class="product-icon">
-            <i class="fas fa-cogs"></i>
-          </div>
-          <h2>Custom Solutions</h2>
-          <p>
-            We develop tailored bioinformatics and genomics solutions for 
-            pharmaceutical research, clinical trials, and precision medicine 
-            applications based on your specific requirements.
-          </p>
-          <a href="custom-solutions.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
+    <!-- 2. SECTION: Biomarker Analysis (MOVED UP and SEPARATED) -->
+    <section id="biomarkers" class="section-padding section-biomarker">
+        <div class="container">
+            <div class="biomarker-content-wrapper">
 
-    <!-- PAGE 3: OUR RESEARCH WORK -->
-    <div id="page3">
-      <div class="research-content">
-        <div class="research-image">
-          <!-- Replace with your actual image source -->
-          <img src="./videos/Combined.png" alt="Research Image"/>
-        </div>
-        <div class="research-text">
-          <h1>Our Research</h1>
-          <p>
-            We have developed a state-of-the-art model that identifies novel biomarkers to predict the response of drugs after short-term treatment for cancer, which aims to investigate the association between treatment response and genomics modules and uncover key biological processes and pathways in cancer.
-          </p>
-        </div>
-      </div>
-    </div>
+                <!-- Left Column: Image -->
+                <div class="biomarker-image" data-aos="fade-right" data-aos-delay="100">
+                    <!-- No placeholder div needed if using img directly -->
+                    <img src="images/biomarker2.png" alt="Equitable Biomarker Discovery Visualization">
+                </div>
 
-    <!-- PAGE 4: PUBLICATIONS -->
-    <div id="page4">
-      <div class="pub-content">
-        <h1>Publications & Articles</h1>
-        <ul>
-          <li>
-            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9310521/#:~:text=The%20analysis%20confirms%20that%20gp78,survival%20in%20women%20of%20African" target="_blank">
-              Protein Levels of the gp78 Ligase Predict Poor Breast Cancer Outcome Based on Race. The Journal of Clinical Investigation (JCI) Insight, May 2022, (PMC9310521)
-            </a>
-          </li>
-          <li>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/33526872/" target="_blank">
-              Kaiso (ZBTB33) subcellular partitioning functionally links LC3A/B, the tumor microenvironment, and breast cancer survival. Nature - Communications biology 4 (1), 1-132021
-            </a>
-          </li>
-          <li>
-            <a href="https://www.nature.com/articles/s41588-020-00748-0" target="_blank">
-              Trans-ancestry genome-wide association meta-analysis of prostate cancer identifies new susceptibility loci and informs genetic risk prediction. Nature genetics 53 (1), 65-75
-            </a>
-          </li>
-          <li>
-            <a href="https://www.nature.com/articles/s41588-020-00748-0" target="_blank">
-              Ancestry-dependent gene expression correlates with reprogramming to pluripotency and multiple dynamic biological processes. Sci Adv. 2020 Nov;6(47). doi: 10.1126/sciadv.abc3851. Print 2020 Nov. PubMed PMID: 33219026; PubMed Central PMCID: PMC7679169
-            </a>
-          </li>
-          <li>
-            <a href="https://www.nature.com/articles/s41588-020-00748-0" target="_blank">
-              Racial Differences in the Association between Luminal Master Regulator Expression and Breast Cancer Survival". Clinical Cancer Research, 2020
-            </a>
-          </li>
-          <li>
-            <a href="https://www.nature.com/articles/s41588-020-00748-0" target="_blank">
-              Gene modules and response to neoadjuvant chemotherapy in breast cancer subtypes: a pooled analysis, "Journal of Clinical Oncology, 2012J Clin Oncol 30:1996-2004, 2012
-            </a>
-          </li>
-          <li>
-            <a href="https://www.nature.com/articles/s41588-020-00748-0" target="_blank">
-              Elucidating prognosis and biology of breast cancer arising in young women using gene expression profiling, "Clinical Cancer Research, 2012
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+                <!-- Right Column: Text -->
+                <div class="biomarker-text" data-aos="fade-left" data-aos-delay="200">
+                    <h2 class="section-title-biomarker dark-text">
+                        Pioneering Equitable Biomarker Discovery
+                    </h2>
+                    <p class="dark-text">
+                        Traditional biomarker discovery often overlooks population diversity, leading to tools that may not perform equally well across different racial and ethnic groups. This disparity hinders progress in personalized medicine.
+                    </p>
+                    <p class="dark-text">
+                        With 25+ Years of experience we provide in depth biomarker analysis using a wide collection of proven biomarkers tailored for survival analysis, therapeutic response and remission and reccurance markers.
+                    </p>
+                    <p class="dark-text">
+                        Our team utilizes state-of-the-art (SOTA) computational approaches specifically designed to identify robust and reliable biomarkers while actively addressing potential biases related to ancestry and race. We integrate multi-omics data and employ advanced machine learning techniques.
+                    </p>
+                    <!--  <p class="dark-text">
+                        By focusing on rigorous validation across diverse cohorts, we aim to develop racially aware biomarkers that contribute to more equitable healthcare outcomes and truly personalized treatments for all populations.
+                    </p> -->
+                </div>
 
-    <!-- PAGE 5: OUR CLIENTS -->
-    <div id="page5">
-      <h1 class="section-title">Individual Affiliated Publications</h1>
-      <div class="client-carousel">
-        <div class="swiper client-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./images/bio-techne.jpg" alt="Bio-Techne" />
             </div>
-            <div class="swiper-slide">
-              <img src="./images/UofA.jpg" alt="University of Arizona" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./images/UND.png" alt="University of North Dakota" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./images/columbia.png" alt="Columbia University" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./images/NIH.png" alt="NIH" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./images/Google.webp" alt="Google" />
-            </div>
-          </div>
-          <!-- Add navigation buttons -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
         </div>
-        <!-- Pagination outside the swiper container but inside client-carousel -->
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
+    </section>
+    <!-- END SECTION: Biomarker Analysis -->
 
-    <!-- PAGE 6: CONTACT US -->
-    <div id="page6">
-      <h1 class="section-title">Contact Us</h1>
-      <div class="contact-wrapper">
-        <div class="contact-card">
-          <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <h2>Get in Touch</h2>
-          <p>Ready to partner with us? Our team is available to discuss your genomics and biomarker needs.</p>
-          <div class="contact-buttons">
-            <a href="mailto:connect@s-bios.com" class="contact-btn">Email Us</a>
-            <a href="tel:+17017778888" class="contact-btn phone">Call Us</a>
-          </div>
-          <div class="contact-info">
-            <p><i class="fas fa-map-marker-alt"></i> Grand Forks, North Dakota</p>
-            <p><i class="fas fa-envelope"></i> connect@s-bios.com</p>
-          </div>
+
+    <!-- 3. SECTION: Bioinformatics Consultancy (SEPARATED, Background Image via CSS) -->
+    <section id="consultancy" class="section-padding section-alternate">
+        <div class="container">
+            <h2 class="section-title dark-text" data-aos="fade-up">Expert Bioinformatics Analysis</h2>
+
+            <!-- Consultancy Pillars -->
+            <div class="consultancy-pillars">
+                <div class="pillar-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pillar-icon">
+                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    </div>
+                    <h3 class="dark-text">Diverse Data Expertise</h3>
+                    <p class="dark-text">
+                       Handling complex data including Genomics (DNA-seq, RNA-seq), Proteomics, Spatial Transcriptomics, Multiplex imaging (IHC/IF), H&E stains, and more.
+                    </p>
+                </div>
+                <div class="pillar-card" data-aos="fade-up" data-aos-delay="300">
+                     <div class="pillar-icon">
+                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    </div>
+                    <h3 class="dark-text">Tailored Analysis Pipelines</h3>
+                    <p class="dark-text">
+                        Developing bespoke computational workflows designed specifically for your data type and biological questions, ensuring optimal results.
+                    </p>
+                </div>
+                 <div class="pillar-card" data-aos="fade-up" data-aos-delay="400">
+                     <div class="pillar-icon">
+                          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    </div>
+                    <h3 class="dark-text">Actionable Insights</h3>
+                    <p class="dark-text">
+                        Delivering clear, interpretable results and publication-ready visualizations that drive your research forward. Your discoveries are our priority.
+                    </p>
+                </div>
+            </div>
+            <!-- End Consultancy Pillars -->
+
+             <!-- Data Modality Image Showcase -->
+            <div class="data-modality-showcase" data-aos="fade-up" data-aos-delay="200">
+                <h4 class="section-subtitle dark-text">Data Modalities We Process</h4>
+                <div class="data-image-grid">
+                    <!-- Image Item 1 -->
+                    <div class="data-image-item">
+                        <div class="data-image-placeholder">
+                            <img src="images/image1.png" alt="Omics Data Analysis">
+                        </div>
+                        <p class="data-caption dark-text">Genomics, Proteomics, Transcriptomics & Metabolomics</p>
+                    </div>
+                     <!-- Image Item 2 -->
+                     <div class="data-image-item">
+                        <div class="data-image-placeholder">
+                            <img src="images/image2.png" alt="Multiplex Imaging Analysis">
+                        </div>
+                        <p class="data-caption dark-text">Multiplex Imaging (IHC/IF)</p>
+                    </div>
+                     <!-- Image Item 3 -->
+                     <div class="data-image-item">
+                        <div class="data-image-placeholder">
+                             <img src="images/combined.png" alt="H&E Stain Analysis">
+                        </div>
+                        <p class="data-caption dark-text">Histopathology (H&E)</p>
+                    </div>
+                     <!-- Image Item 4 -->
+                    <div class="data-image-item">
+                        <div class="data-image-placeholder">
+                              <img src="images/3dhne.png" alt="3D Spatial Biology">
+                        </div>
+                         <p class="data-caption dark-text">3D Spatial Biology</p>
+                    </div>
+                </div>
+            </div>
+             <!-- End Data Modality Image Showcase -->
+
         </div>
-      </div>
-    </div>
-    
-  </div>
+    </section>
+    <!-- END SECTION: Bioinformatics Consultancy -->
+        <!-- END SECTION: Bioinformatics Consultancy -->
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"
-    integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"
-    integrity="sha512-LQQDtPAueBcmGXKdOBcMkrhrtqM7xR2bVrnMtYZ8ImAZhFlIb5xrMqQ6uZviyeSB+4mYj89ta8niiCIQM1Gj0w=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  <script src="script.js"></script>
+
+        <!-- 4. SECTION: Affiliated Publications -->
+    <section id="publications" class="section-padding section-dark-bg">
+        <div class="container">
+            <h2 class="section-title light-text" data-aos="fade-up">Affiliated Organizations & Publications</h2> <!-- Updated title slightly -->
+
+            <div class="logo-slider-container" data-aos="fade-up" data-aos-delay="100">
+                <div class="logo-slider-track">
+                    <!-- ONLY ONE SET of logos needed -->
+                    <div class="logo-slide">
+                        <img src="images/bio-techne.jpg" alt="Bio-Techne">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="images/columbia.png" alt="Columbia University">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="images/UND.png" alt="University of North Dakota">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="images/UofA.jpg" alt="University of Arizona">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="images/NIH.png" alt="NIH">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="images/google.webp" alt="Google">
+                    </div>
+                    <!-- Add more logos here if needed, but only one set -->
+                     
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END SECTION: Affiliated Publications -->
+
+
+    <!-- 5. Contact Us Section -->
+    <section id="contact" class="section-padding">
+
+    <!-- 4. Contact Us Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Let's Collaborate</h2>
+            <p class="contact-intro" data-aos="fade-up" data-aos-delay="100">
+                Ready to elevate your research to next level? Let our bioinformatics expertise drive your next discovery. Contact us to discuss your project needs.
+            </p>
+                        <div class="contact-form-container" data-aos="fade-up" data-aos-delay="200">
+                <!-- UPDATE THE FORM ACTION HERE -->
+                <form id="contact-form"
+                      action="https://formspree.io/f/xnndnpee"  
+                      method="POST">
+
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="_replyto" required> <!-- Use name="_replyto" -->
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                     <!-- Optional Honeypot -->
+                     <input type="text" name="_gotcha" style="display:none">
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+             <p class="contact-alt" data-aos="fade-up" data-aos-delay="300">
+                Or email us directly at: <a href="mailto:connect@s-bios.com">connect@s-bios.com</a>
+             </p>
+        </div>
+    </section>
+    <!-- END SECTION: Contact Us -->
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 SBIOS. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
