@@ -8,7 +8,7 @@
     --heading-color: #FFFFFF; /* White */
     --background-light: #F8F9FA; /* For alternating sections */
     --text-dark: #333; /* Dark text for light backgrounds */
-    --overlay-light: rgba(248, 249, 250, 0.9); /* Light overlay for #consultancy (90% opaque) */
+    --overlay-light: rgba(248, 249, 250, 0.4); /* Light overlay for #consultancy (90% opaque) */
     --overlay-dark: rgba(11, 19, 43, 0.6); /* Dark overlay for hero video */
 
     --font-primary: 'Poppins', sans-serif;
