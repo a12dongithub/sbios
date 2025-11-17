@@ -154,6 +154,11 @@ a:hover {
     font-weight: 700;
     color: var(--heading-color);
 }
+.navbar .nav-logo img {
+    height: 60px;     /* adjust as needed */
+    width: auto;
+}
+
 .nav-logo:hover { color: var(--highlight-color); }
 .nav-menu { list-style: none; display: flex; }
 .nav-menu li { margin-left: 25px; }
@@ -411,6 +416,7 @@ a:hover {
 #contact-form button[type="submit"] { width: 100%; margin-top: 10px; }
 .contact-alt { text-align: center; margin-top: 30px; color: var(--text-color); }
 .contact-alt a { font-weight: 600; color: var(--highlight-color); }
+
 
 
 /* --- Footer --- */

@@ -18,7 +18,9 @@
     <!-- Navigation Bar - UPDATED LINKS -->
     <nav class="navbar">
         <div class="container">
-            <a href="#hero" class="nav-logo">SBIOS</a>
+            <a href="#hero" class="nav-logo">
+                <img src="images/Screenshot_2.png" alt="SBIOS logo">
+            </a>
             <ul class="nav-menu">
                 <li><a href="#biomarkers">Biomarkers</a></li>
                 <li><a href="#consultancy">Consultancy</a></li>
@@ -53,10 +55,11 @@
             <div class="biomarker-content-wrapper">
 
                 <!-- Left Column: Image -->
+                                <!-- Left Column: Image -->
                 <div class="biomarker-image" data-aos="fade-right" data-aos-delay="100">
-                    <!-- No placeholder div needed if using img directly -->
-                    <img src="images/biomarker1.png" alt="Equitable Biomarker Discovery Visualization">
+                    <img id="biomarker-rotator" src="images/fig1.webp" alt="Equitable Biomarker Discovery Visualization">
                 </div>
+
 
                 <!-- Right Column: Text -->
                 <div class="biomarker-text" data-aos="fade-left" data-aos-delay="200">
@@ -266,7 +269,26 @@
     </footer>
 
     <!-- Scripts -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var img = document.getElementById('biomarker-rotator')
+        if (!img) return
+        var frames = [
+            'images/fig1.webp',
+            'images/fig2.webp',
+            'images/fig3.webp',
+            'images/fig4.webp',
+            'images/fig5.webp'
+        ]
+        var i = 0
+        setInterval(function() {
+            i = (i + 1) % frames.length
+            img.src = frames[i]
+        }, 2000)
+    })
+    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
+        
 </body>
 </html>
